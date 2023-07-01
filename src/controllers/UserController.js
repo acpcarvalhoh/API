@@ -20,7 +20,9 @@ class UserControllers {
             throw new AppError("Nome é obrigatório")
         }
 
-        response.json(`Teste!!`);
+        response.status(200).json(
+            {message: "Usuário cadastrado"}
+        );
 
     };
 };
