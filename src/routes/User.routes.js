@@ -4,7 +4,7 @@ const UserController = require("./../controllers/UserController")
 
 const userController = new UserController();
 
-userRouter.get("/", userController.create);
+userRouter.get("/:id", userController.create);
   
 
 module.exports = userRouter;

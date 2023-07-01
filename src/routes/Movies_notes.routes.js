@@ -2,7 +2,7 @@ const { Router } = require("express");
 const Moviesrouter = Router();
 
 Moviesrouter.get("/:id", (request, response) => {
-  const { id } = request.params;
+  const { name } = request.params;
   response.send(`Testando!!!`);
 
   
