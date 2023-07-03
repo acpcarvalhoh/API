@@ -1,11 +1,11 @@
 const { Router } = require("express");
-const Moviesrouter = Router();
+const moviesRouter = Router();
+const MovieNotesController = require("../controllers/MoviesController");
 
-Moviesrouter.get("/:id", (request, response) => {
-  const { name } = request.params;
-  response.send(`Testando!!!`);
 
-  
-});
+const movieNotesController = new MovieNotesController();
 
-module.exports = Moviesrouter;
+moviesRouter.post("/:user_id", movieNotesController.create);
+
+
+module.exports = moviesRouter;
