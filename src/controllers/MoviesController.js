@@ -22,7 +22,7 @@ class MovieNotesController {
 
         console.log(note_id)
 
-        const tagsInsert = tags.map(name=> {
+        const tagsInsert = tags.map( name => {
             return{
                 note_id,
                 user_id,
