@@ -2,6 +2,21 @@
 
 Esta é uma API permite cadastrar usuários no banco de dados, esse usuário podem cadastrar notas de filmes, adicionar tags aos filmes e listar as informações relacionadas a eles. A API foi construída usando Node.js e utiliza o framework Express.js para lidar com as rotas e requisições HTTP. O banco de dados utilizado é o SQLite, e o Knex.js é utilizado como um query builder para interagir com o banco de dados.
 
+# API de Gerenciamento de Filmes - Readme
+
+Esta é uma API de gerenciamento de filmes que permite criar notas de filmes, adicionar tags aos filmes e listar as informações relacionadas a eles. A API foi construída usando Node.js e utiliza o framework Express.js para lidar com as rotas e requisições HTTP. O banco de dados utilizado é o SQLite, e o Knex.js é utilizado como um query builder para interagir com o banco de dados.
+
+## Tecnologias Utilizadas
+
+As principais tecnologias utilizadas no desenvolvimento desta API são:
+
+- Node.js: ambiente de execução JavaScript do lado do servidor.
+- Express.js: framework web para construção de APIs e aplicativos web.
+- SQLite: banco de dados relacional utilizado para armazenar as informações da API.
+- Knex.js: query builder utilizado para interagir com o banco de dados SQLite.
+- bcryptjs: biblioteca para a criptografia de senhas.
+
+
 ## Endpoints
 
 A API possui os seguintes endpoints:
@@ -48,7 +63,14 @@ Contribuições são bem-vindas! Se você encontrar algum problema, tiver sugest
 
 ## Autor
 
-Esta API foi desenvolvida por [Adão Carvalhoh]. Para entrar em contato, envie um e-mail para [carvalhohuzumak@gmail.com].
+Este projeto foi desenvolvido por Adão Carvalho. Aqui estão algumas informações sobre o autor:
+
+- **Nome**: Adão Carvalho
+- **Descrição**: Sou um desenvolvedor de software apaixonado por tecnologia e programação. Tenho experiência no desenvolvimento de aplicações web e estou sempre buscando aprender novas tecnologias. Este projeto foi criado como parte do meu aprendizado e prática de desenvolvimento de APIs.
+- **Contato**: Você pode entrar em contato comigo pelo e-mail carvalhohuzumak@gmail.com.
+- **Perfil**: Você pode encontrar mais projetos e trabalhos no meu perfil do GitHub: [acpcarvalhoh](https://github.com/acpcarvalhoh)
+
+Sinta-se à vontade para entrar em contato comigo para mais informações sobre o projeto ou para qualquer outra questão relacionada.
 
 
 
