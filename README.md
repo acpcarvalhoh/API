@@ -2,9 +2,6 @@
 
 Esta é uma API permite cadastrar usuários no banco de dados, esse usuário podem cadastrar notas de filmes, adicionar tags aos filmes e listar as informações relacionadas a eles. A API foi construída usando Node.js e utiliza o framework Express.js para lidar com as rotas e requisições HTTP. O banco de dados utilizado é o SQLite, e o Knex.js é utilizado como um query builder para interagir com o banco de dados.
 
-# API de Gerenciamento de Filmes - Readme
-
-Esta é uma API de gerenciamento de filmes que permite criar notas de filmes, adicionar tags aos filmes e listar as informações relacionadas a eles. A API foi construída usando Node.js e utiliza o framework Express.js para lidar com as rotas e requisições HTTP. O banco de dados utilizado é o SQLite, e o Knex.js é utilizado como um query builder para interagir com o banco de dados.
 
 ## Tecnologias Utilizadas
 
