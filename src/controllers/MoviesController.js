@@ -11,17 +11,17 @@ class MovieNotesController {
     */
 
     async create(request, response){
-        const {title, description, rating, tags} = request.body;
-        const {user_id} = request.params;
+        const { title, description, rating, tags } = request.body;
+        const { user_id } = request.params;
 
-        const [note_id] = await knex("movie_notes").insert({
+        const [ note_id ] = await knex("movie_notes").insert({
             title,
             description,
             rating,
             user_id
         })
 
-        console.log(note_id)
+       
 
         const tagsInsert = tags.map( name => {
             return{
@@ -95,7 +95,7 @@ class MovieNotesController {
         
         
        
-        return response.json({noteWithTags});
+        return response.json(noteWithTags);
     }
 
 
