@@ -12,7 +12,7 @@ class MovieNotesController {
 
     async create(request, response){
         const { title, description, rating, tags } = request.body;
-        const { user_id } = request.params;
+        const  user_id  = request.user.id;
 
         const [ note_id ] = await knex("movie_notes").insert({
             title,
@@ -38,7 +38,7 @@ class MovieNotesController {
     }
 
     async show(request, response){
-        const {id} = request.params;
+        const { id } = request.params;
 
         const note = await knex("movie_notes").where({id}).first();
         const tags = await knex("movie_tags").where({note_id: id}).orderBy("name")
@@ -48,7 +48,7 @@ class MovieNotesController {
 
 
     async delete(request, response){
-        const {id} = request.params;
+        const { id } = request.params;
 
         await knex("movie_notes").where({id}).delete();
     
@@ -56,7 +56,10 @@ class MovieNotesController {
     }
 
     async index(request, response){
-        const {user_id, title, tags} = request.query;
+        const {title, tags} = request.query;
+
+        const user_id = request.user.id;
+        
         let notes;
 
         if(tags){

@@ -16,8 +16,8 @@ class UserControllers {
 
 
     async create(request, response){
-        const {name, email, password} = request.body;
-        const { id } = request.params;
+        const { name, email, password } = request.body;
+        
 
         const database = await sqlconection();
         const checkUserExist = await database.get("SELECT  * FROM users WHERE email = (?)", [email]);
@@ -48,16 +48,17 @@ class UserControllers {
 
     async update(request, response){
         const {name, email, password, old_password} = request.body;
-        const { id } = request.params;
+        const user_id = request.user.id;
 
         const database = await sqlconection();
 
-        const user = await database.get("SELECT * FROM users WHERE id = (?)", [id])
+        const user = await database.get("SELECT * FROM users WHERE id = (?)", [user_id])
         if(!user){
             throw new AppError("Usuário inválido!!")
         }
 
         const checkEmailExist = await database.get("SELECT * FROM users WHERE email = (?)", [email])
+
         if(checkEmailExist && checkEmailExist.email !== user.email){
             throw new AppError("Este Email já está em uso!!")
         }
@@ -93,7 +94,7 @@ class UserControllers {
             WHERE id = ?
 
         `
-        const updateValues = [user.name, user.email, user.password, update_at, id]
+        const updateValues = [user.name, user.email, user.password, update_at, user_id]
 
         await database.run(insertUpdate, updateValues)
 
