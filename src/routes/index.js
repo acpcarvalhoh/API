@@ -7,7 +7,7 @@ const sessionsRouter = require("./Sessions.routes")
 const routes = Router();
 
 routes.use("/users", userRouter);
-routes.use("/notes", moviesRouter);
+routes.use("/movie_notes", moviesRouter);
 routes.use("/tags", tagRouter);
 routes.use("/sessions", sessionsRouter);
 
